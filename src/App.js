@@ -26,6 +26,7 @@ const App = () => {
     addAtributes(data, "nameEvents");
   }, []);
   function getEvents(nameEvents) {
+    
     return nameEvents.map((value) =>
       Object.values(value).map((items) => {
         let item = items;
@@ -50,6 +51,7 @@ const App = () => {
       for (let j in val) {
         let sub_key = j;
         array.push(sub_key);
+
       }
     }
     const unique = [...new Set(array)];
@@ -101,6 +103,7 @@ const App = () => {
             );
           })}
         </tbody>
+        
       </table>
       <ModalApp
         id={modalData.id}
@@ -111,6 +114,7 @@ const App = () => {
       ></ModalApp>
     </div>
   );
+  
 };
 
 export default App;
